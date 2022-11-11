@@ -83,6 +83,9 @@ targets = [
     "x86_64-unknown-linux-gnu",
 ]
 
+[package.metadata.raze.crates.clap.'3.2.23']
+data_attr = "glob([\"examples/demo.md\"])"
+
 [package.metadata.raze.crates.crc.'1.8.1']
 gen_buildrs = true
 
