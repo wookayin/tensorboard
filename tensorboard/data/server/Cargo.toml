@@ -32,6 +32,7 @@ bytes = "1.0.1"
 clap = { version = "3.2.23", features = ["derive", "env", "cargo"] }
 crc = "1.8.1"
 crossbeam = "0.8.0"
+crossbeam-epoch = "=0.9.7"
 env_logger = "0.8.2"
 futures-core = "0.3.12"
 log = "0.4.11"

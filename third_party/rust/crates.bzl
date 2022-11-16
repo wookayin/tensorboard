@@ -233,12 +233,12 @@ def raze_fetch_remote_crates():
 
     maybe(
         http_archive,
-        name = "raze__crossbeam_epoch__0_9_11",
-        url = "https://crates.io/api/v1/crates/crossbeam-epoch/0.9.11/download",
+        name = "raze__crossbeam_epoch__0_9_7",
+        url = "https://crates.io/api/v1/crates/crossbeam-epoch/0.9.7/download",
         type = "tar.gz",
-        sha256 = "f916dfc5d356b0ed9dae65f1db9fc9770aa2851d2662b988ccf4fe3516e86348",
-        strip_prefix = "crossbeam-epoch-0.9.11",
-        build_file = Label("//third_party/rust/remote:BUILD.crossbeam-epoch-0.9.11.bazel"),
+        sha256 = "c00d6d2ea26e8b151d99093005cb442fb9a37aeaca582a03ec70946f49ab5ed9",
+        strip_prefix = "crossbeam-epoch-0.9.7",
+        build_file = Label("//third_party/rust/remote:BUILD.crossbeam-epoch-0.9.7.bazel"),
     )
 
     maybe(

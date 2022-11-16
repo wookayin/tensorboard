@@ -199,13 +199,13 @@ dependencies = [
 
 [[package]]
 name = "crossbeam-epoch"
-version = "0.9.11"
+version = "0.9.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f916dfc5d356b0ed9dae65f1db9fc9770aa2851d2662b988ccf4fe3516e86348"
+checksum = "c00d6d2ea26e8b151d99093005cb442fb9a37aeaca582a03ec70946f49ab5ed9"
 dependencies = [
- "autocfg",
  "cfg-if",
  "crossbeam-utils",
+ "lazy_static",
  "memoffset",
  "scopeguard",
 ]
@@ -981,6 +981,7 @@ dependencies = [
  "clap",
  "crc",
  "crossbeam",
+ "crossbeam-epoch",
  "env_logger",
  "futures-core",
  "log",
