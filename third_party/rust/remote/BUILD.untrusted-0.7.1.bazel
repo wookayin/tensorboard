@@ -34,6 +34,8 @@ licenses([
 rust_library(
     name = "untrusted",
     srcs = glob(["**/*.rs"]),
+    crate_features = [
+    ],
     crate_root = "src/untrusted.rs",
     data = [],
     edition = "2018",
@@ -42,7 +44,6 @@ rust_library(
     ],
     tags = [
         "cargo-raze",
-        "crate-name=untrusted",
         "manual",
     ],
     version = "0.7.1",

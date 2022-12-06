@@ -34,6 +34,8 @@ licenses([
 rust_library(
     name = "rand_hc",
     srcs = glob(["**/*.rs"]),
+    crate_features = [
+    ],
     crate_root = "src/lib.rs",
     data = [],
     edition = "2018",
@@ -42,7 +44,6 @@ rust_library(
     ],
     tags = [
         "cargo-raze",
-        "crate-name=rand_hc",
         "manual",
     ],
     version = "0.2.0",

@@ -47,7 +47,7 @@ rust_library(
     name = "rand",
     srcs = glob(["**/*.rs"]),
     aliases = {
-        "@raze__getrandom__0_1_15//:getrandom": "getrandom_package",
+        "@raze__getrandom__0_1_16//:getrandom": "getrandom_package",
     },
     crate_features = [
         "alloc",
@@ -65,15 +65,15 @@ rust_library(
     ],
     tags = [
         "cargo-raze",
-        "crate-name=rand",
         "manual",
     ],
     version = "0.7.3",
     # buildifier: leave-alone
     deps = [
-        "@raze__getrandom__0_1_15//:getrandom",
+        "@raze__getrandom__0_1_16//:getrandom",
         "@raze__rand_core__0_5_1//:rand_core",
     ] + selects.with_or({
+        # cfg(not(target_os = "emscripten"))
         (
             "@rules_rust//rust/platform:x86_64-apple-darwin",
             "@rules_rust//rust/platform:x86_64-pc-windows-msvc",
@@ -83,11 +83,12 @@ rust_library(
         ],
         "//conditions:default": [],
     }) + selects.with_or({
+        # cfg(unix)
         (
             "@rules_rust//rust/platform:x86_64-apple-darwin",
             "@rules_rust//rust/platform:x86_64-unknown-linux-gnu",
         ): [
-            "@raze__libc__0_2_126//:libc",
+            "@raze__libc__0_2_137//:libc",
         ],
         "//conditions:default": [],
     }),

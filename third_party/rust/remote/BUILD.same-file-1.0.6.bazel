@@ -40,6 +40,8 @@ rust_library(
     srcs = glob(["**/*.rs"]),
     aliases = {
     },
+    crate_features = [
+    ],
     crate_root = "src/lib.rs",
     data = [],
     edition = "2018",
@@ -48,13 +50,13 @@ rust_library(
     ],
     tags = [
         "cargo-raze",
-        "crate-name=same-file",
         "manual",
     ],
     version = "1.0.6",
     # buildifier: leave-alone
     deps = [
     ] + selects.with_or({
+        # cfg(windows)
         (
             "@rules_rust//rust/platform:x86_64-pc-windows-msvc",
         ): [

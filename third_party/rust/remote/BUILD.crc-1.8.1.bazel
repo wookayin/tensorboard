@@ -59,7 +59,7 @@ cargo_build_script(
     version = "1.8.1",
     visibility = ["//visibility:private"],
     deps = [
-        "@raze__build_const__0_2_1//:build_const",
+        "@raze__build_const__0_2_2//:build_const",
     ],
 )
 
@@ -80,7 +80,6 @@ rust_library(
     ],
     tags = [
         "cargo-raze",
-        "crate-name=crc",
         "manual",
     ],
     version = "1.8.1",
